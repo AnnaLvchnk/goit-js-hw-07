@@ -1,13 +1,8 @@
-const form = document.querySelector('#name-input');
-const text = document.querySelector('h1');
-const span = document.querySelector('#name-output');
-form.addEventListener('input', e => {
-  e.preventDefault();
-  const formInput = e.target.value.trim();
-  if (formInput === '') {
-    console.log(text.textContent);
-  } else {
-    span.textContent = `${formInput}`;
-    console.log(span);
-  }
+const input = document.querySelector('#name-input');
+const output = document.querySelector('#name-output');
+
+input.addEventListener('input', event => {
+  output.textContent = event.currentTarget.value.trim()
+    ? event.currentTarget.value
+    : 'Anonymous';
 });
