@@ -25,10 +25,10 @@ const images = [
   },
 ];
 const list = document.querySelector('.gallery');
-const murcup = images
+const galleryHTML = images
   .map(
     ({ url, alt }) =>
-      `<li class="picture"><img src= "${url}" alt= "${alt}"/></li>`
+      `<li class="gallery-item"><img src="${url}" alt="${alt}"/></li>`
   )
   .join('');
-list.insertAdjacentHTML('afterbegin', murcup);
+list.insertAdjacentHTML('afterbegin', galleryHTML);
