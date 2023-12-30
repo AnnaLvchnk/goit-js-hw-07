@@ -13,12 +13,12 @@ function destroyEl() {
 function createBoxes(amount) {
   destroyEl();
   for (let i = 0; i < amount; i++) {
-    let size = 30 + 10 * i;
+    const size = 30 + 10 * i;
     const divBox = document.createElement('div');
     divBox.style.cssText = `width: ${size}px; height: ${size}px; background-color: ${getRandomHexColor()}`;
     boxes.insertAdjacentElement('beforeend', divBox);
   }
-  Number(formInput.value) = '';
+  formInput.value = '';
 }
 btnCreate.addEventListener('click', () => {
   if (1 <= formInput.value && formInput.value <= 100) {
